@@ -1,0 +1,581 @@
+.font1 {
+  font-family: "tilth";
+}
+
+.font2 {
+  font-family: "Dewan";
+}
+
+.font3 {
+  font-family: "main";
+}
+
+body {
+  background-image: url("../imgs/ChatGPT Image Oct 13, 2025, 12_25_21 AM.png");
+}
+
+@keyframes animation1 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes animation2 {
+  from {
+    transform: translateY(70px);
+  }
+  to {
+    transform: translateY(60px);
+  }
+}
+@keyframes animation3 {
+  from {
+    transform: translateY(50px);
+  }
+  to {
+    transform: translateY(40px);
+  }
+}
+header .section {
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+header .section1.active .boxImg {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+header .section1.active .boxText {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+header .section1 {
+  background-image: url("../imgs/ChatGPT Image Oct 13, 2025, 12_25_21 AM.png");
+  background-attachment: fixed;
+}
+header .section1::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.7;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: initial;
+  left: initial;
+  z-index: -1;
+}
+header .section1 .container {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: initial;
+  justify-content: center;
+  align-items: center;
+}
+header .section1 .container .bigBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+header .section1 .container .bigBox .boxImg {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1s 0.5s;
+}
+header .section1 .container .bigBox .boxImg .imgShapes {
+  display: flex;
+  flex-direction: initial;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+}
+header .section1 .container .bigBox .boxImg .imgShapes .shape img {
+  transform: translateY(40px);
+  width: 30px;
+  animation-name: animation1;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+header .section1 .container .bigBox .boxImg .imgShapes .shape.shape1 img {
+  transform: translateY(120px);
+  margin-left: 30px;
+  animation-delay: 0.3s;
+}
+header .section1 .container .bigBox .boxImg .imgShapes .shape.shape2 img {
+  animation-delay: 0.5s;
+}
+header .section1 .container .bigBox .boxImg .imgShapes .shape.shape3 img {
+  transform: translateY(120px);
+  margin-right: 30px;
+  animation-delay: 0.7s;
+}
+header .section1 .container .bigBox .boxImg .boxImgCon .imgCon:nth-of-type(1) {
+  display: flex;
+  flex-direction: initial;
+  justify-content: center;
+  align-items: center;
+}
+header .section1 .container .bigBox .boxImg .boxImgCon .imgCon:nth-of-type(1) img {
+  animation-name: animation2;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  transform: translateY(55px);
+  width: 150px;
+}
+@media (max-width: 1300px) {
+  header .section1 .container .bigBox .boxImg .boxImgCon .imgCon:nth-of-type(1) img {
+    width: 100px;
+    animation-name: animation3;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+  }
+}
+header .section1 .container .bigBox .boxImg .boxImgCon .imgCon:nth-of-type(2) img {
+  width: 280px;
+}
+@media (max-width: 1300px) {
+  header .section1 .container .bigBox .boxImg .boxImgCon .imgCon:nth-of-type(2) img {
+    width: 200px;
+  }
+}
+header .section1 .container .bigBox .boxText {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1s 1s;
+}
+header .section1 .container .bigBox .boxText .headBox {
+  display: flex;
+  flex-direction: initial;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+header .section1 .container .bigBox .boxText .headBox .imgCon {
+  display: flex;
+  flex-direction: initial;
+  justify-content: center;
+  align-items: center;
+}
+header .section1 .container .bigBox .boxText .headBox .imgCon img {
+  width: 30px;
+  animation-name: animation1;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+header .section1 .container .bigBox .boxText .headBox .imgCon.imgCon2 img {
+  margin-top: 7px;
+  animation-delay: 0.3s;
+}
+header .section1 .container .bigBox .boxText .headBox h1.library {
+  font-size: 70px;
+}
+@media (max-width: 1300px) {
+  header .section1 .container .bigBox .boxText .headBox h1.library {
+    font-size: 50px;
+  }
+}
+header .section1 .container .bigBox .boxText .headBox h1.library {
+  color: #FFFFFF;
+  text-shadow: 0px 5px 38px #fff;
+}
+header .section1 .container .bigBox .boxText .textanim {
+  font-size: 50px;
+}
+@media (max-width: 1300px) {
+  header .section1 .container .bigBox .boxText .textanim {
+    font-size: 30px;
+  }
+}
+@media (min-width: 371px) and (max-width: 1300px) {
+  header .section1 .container .bigBox .boxText .textanim {
+    font-size: 37px;
+  }
+}
+header .section1 .container .bigBox .boxText .textanim {
+  color: white;
+}
+header .section1 .container .bigBox .boxText .textanim span.cd-words-wrapper {
+  text-align: center;
+  width: 150px !important;
+}
+@media (max-width: 1300px) {
+  header .section1 .container .bigBox .boxText .textanim span.cd-words-wrapper {
+    width: 40px !important;
+  }
+}
+@media (min-width: 577px) and (max-width: 1300px) {
+  header .section1 .container .bigBox .boxText .textanim span.cd-words-wrapper {
+    width: 150px !important;
+  }
+}
+@media (min-width: 577px) and (max-width: 1300px) {
+  header .section1 .container .bigBox .boxText .textanim span b {
+    margin-top: 0;
+  }
+}
+header .section1 .container .bigBox .boxText .textanim span b {
+  margin-top: 10px !important;
+  font-size: 40px;
+  display: flex;
+  flex-direction: initial;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+header .section1 .container .bigBox .boxText .textanim span b i {
+  font-size: 30px;
+}
+@media (max-width: 1300px) {
+  header .section1 .container .bigBox .boxText .textanim span b p {
+    display: none;
+  }
+}
+@media (min-width: 577px) and (max-width: 1300px) {
+  header .section1 .container .bigBox .boxText .textanim span b p {
+    display: initial !important;
+  }
+}
+header .section2 {
+  background-image: url("../imgs/haidan-8Kg-2kK97Xc-unsplash.jpg");
+  position: relative;
+  top: initial;
+  right: initial;
+  bottom: initial;
+  left: initial;
+}
+header .section2::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.7;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: initial;
+  left: initial;
+  z-index: -1;
+}
+header .section2.active .box {
+  transform: translateY(0) !important;
+}
+header .section2.active .box.person1 {
+  transition-delay: 1s !important;
+}
+header .section2.active .box.person2 {
+  transition-delay: 1.5s !important;
+}
+header .section2.active .box.person3 {
+  transition-delay: 2s !important;
+}
+header .section2.active .box.person4 {
+  transition-delay: 2.5s !important;
+}
+header .section2.active .textBox {
+  transform: translateY(20%) !important;
+}
+header .section2 .container .textBox {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: initial;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-120%);
+  transition: all 1s 0.5s;
+  gap: 10px;
+}
+header .section2 .container .textBox img {
+  width: 30px;
+  animation-name: animation1;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+header .section2 .container .textBox img:nth-last-of-type(2) {
+  animation-delay: 0.5s;
+}
+header .section2 .container .textBox h2 {
+  font-size: 50px;
+  color: white;
+  text-shadow: 0px 5px 38px #fff;
+}
+header .section2 .container .personCon {
+  position: absolute;
+  top: initial;
+  right: initial;
+  bottom: 40px;
+  left: initial;
+}
+@media (max-width: 1300px) {
+  header .section2 .container .personCon {
+    overflow-x: auto;
+  }
+}
+@media (max-width: 1300px) {
+  header .section2 .container .personCon .row {
+    flex-wrap: nowrap !important;
+    width: max-content;
+  }
+}
+@media (max-width: 1300px) {
+  header .section2 .container .personCon .row .column {
+    width: 350px;
+  }
+}
+header .section2 .container .personCon .row .column {
+  padding: 20px;
+  transform: scale(0.9);
+  transition: all 0.5s;
+  overflow: hidden;
+}
+header .section2 .container .personCon .row .column:hover {
+  transform: scale(1);
+}
+header .section2 .container .personCon .row .column .box {
+  height: 350px;
+  width: 300px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  position: relative;
+  top: initial;
+  right: initial;
+  bottom: initial;
+  left: initial;
+  transform: translateY(150%);
+}
+header .section2 .container .personCon .row .column .box:hover .shape .textCon p {
+  text-shadow: 0px 5px 18px #ffffff !important;
+}
+header .section2 .container .personCon .row .column .box {
+  transition: all 1s;
+  cursor: pointer;
+}
+header .section2 .container .personCon .row .column .box .shape {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: initial;
+  left: initial;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+header .section2 .container .personCon .row .column .box .shape .textCon {
+  display: flex;
+  flex-direction: initial;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  color: white;
+  text-shadow: 0px 5px 38px #fff;
+}
+header .section2 .container .personCon .row .column .box .shape .textCon p {
+  transition: all 0.5s;
+}
+header .section2 .container .personCon .row .column .box .shape .btnCon {
+  width: 100%;
+  position: absolute;
+  top: initial;
+  right: 0;
+  bottom: 30px;
+  left: initial;
+  display: flex;
+  flex-direction: initial;
+  justify-content: center;
+  align-items: center;
+}
+header .section2 .container .personCon .row .column .box .shape .btnCon button {
+  width: 80%;
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 20px;
+  padding: 7px 20px;
+  color: white;
+  font-size: 20px;
+  font-family: "Rubik";
+  font-weight: 600;
+  overflow: hidden;
+  transition: all 0.5s;
+  position: relative;
+  top: initial;
+  right: initial;
+  bottom: initial;
+  left: initial;
+  display: flex;
+  flex-direction: initial;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+header .section2 .container .personCon .row .column .box .shape .btnCon button .imgCon {
+  transition: all 0.5s;
+}
+header .section2 .container .personCon .row .column .box .shape .btnCon button .imgCon img {
+  width: 25px;
+  height: 25px;
+}
+header .section2 .container .personCon .row .column .box .shape .btnCon button .imgCon.img1 {
+  transform: translateX(-210%);
+}
+header .section2 .container .personCon .row .column .box .shape .btnCon button .imgCon.img2 {
+  transform: translateX(210%);
+}
+header .section2 .container .personCon .row .column .box .shape .btnCon button .imgCon.img2 img {
+  transform: rotate(180deg);
+}
+header .section2 .container .personCon .row .column .box .shape .btnCon button:hover {
+  transform: scale(0.95);
+}
+header .section2 .container .personCon .row .column .box .shape .btnCon button:hover .img1 {
+  transform: translateX(0);
+}
+header .section2 .container .personCon .row .column .box .shape .btnCon button:hover .img2 {
+  transform: translateX(0);
+}
+header .section2 .container .personCon .row .column .box img {
+  width: 100%;
+  height: 100%;
+}
+
+nav {
+  position: fixed !important;
+  top: 0;
+  right: 0;
+  bottom: initial;
+  left: initial;
+  width: 100%;
+  z-index: 1000;
+  padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  backdrop-filter: blur(5px) saturate(200%);
+  -webkit-backdrop-filter: blur(30px) saturate(120%);
+  background: rgba(0, 0, 0, 0.674);
+}
+@media (min-width: 769px) and (max-width: 1300px) {
+  nav {
+    flex-wrap: nowrap !important;
+  }
+}
+nav .navbar-toggler {
+  top: 20px !important;
+}
+nav .navbar-toggler img {
+  width: 40px;
+}
+nav .logo {
+  display: flex;
+  flex-direction: initial;
+  justify-content: center;
+  align-items: center;
+}
+nav .logo img {
+  width: 30px;
+  animation-name: animation1;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+nav .logo img:last-child {
+  animation-delay: 1s;
+}
+nav .logo .navbar-brand {
+  color: white;
+  font-size: 45px;
+  padding: 5px 15px;
+}
+nav .logo .navbar-brand:hover {
+  color: white;
+}
+nav .logo .navbar-brand:focus {
+  color: white;
+}
+@media (max-width: 1300px) {
+  nav .collapse ul {
+    text-align: center;
+    padding-block: 20px;
+  }
+}
+@media (min-width: 769px) and (max-width: 1300px) {
+  nav .collapse ul {
+    text-align: center;
+    padding-block: inherit !important;
+  }
+}
+nav .collapse ul li {
+  padding: 5px;
+  margin-right: 15px;
+  overflow: hidden;
+  position: relative;
+}
+@media (max-width: 1300px) {
+  nav .collapse ul li {
+    width: 150px;
+    margin: auto;
+  }
+}
+@media (min-width: 769px) and (max-width: 1300px) {
+  nav .collapse ul li {
+    margin-right: 20px;
+    width: initial !important;
+  }
+}
+nav .collapse ul li.active::after {
+  transform: translateY(0);
+}
+nav .collapse ul li.active a {
+  color: white;
+  text-shadow: 0px 4px 14px #fff;
+}
+nav .collapse ul li:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 5px;
+  background-color: white;
+  opacity: 1;
+  position: absolute;
+  top: initial;
+  right: initial;
+  bottom: 0;
+  left: 0;
+  border-radius: 10px 10px 0px 0px;
+  transform: translateY(220%);
+  transition: all 1s;
+}
+nav .collapse ul li a {
+  color: white;
+  font-family: "main";
+  font-weight: 500;
+  font-size: 22px;
+  transition: all 1s;
+}
+nav .collapse ul li a:hover {
+  color: white;
+}
+nav .collapse ul li a:focus {
+  color: white;
+}
+
+/*# sourceMappingURL=index.css.map */

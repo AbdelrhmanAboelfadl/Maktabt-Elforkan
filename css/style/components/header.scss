@@ -1,0 +1,348 @@
+@use "../abstracts" as *;
+header{
+    .section{
+        height: 100%;
+        @include bgImg();
+    }
+    .section1{
+        &.active{
+            .boxImg{
+                opacity: 1!important;
+                transform: translateY(0)!important;
+            }
+            .boxText{
+                opacity: 1!important;
+                transform: translateY(0)!important;
+            }
+        }
+        background-image: url("../imgs/ChatGPT\ Image\ Oct\ 13\,\ 2025\,\ 12_25_21\ AM.png");
+        background-attachment: fixed;
+        &::before{
+            @include shapeNav($w: 100%, $h: 100%, $color:black, $opacity: 0.7);
+            @include Position($type: absolute, $t: 0, $r: 0);
+            z-index: -1;
+        }
+        .container {
+            padding-top: 20px;
+            @include flexCenter();
+            .bigBox{
+                @include flexCenter(column);
+                .boxImg{
+                    opacity: 0;
+                    transform: translateY(30px);
+                    transition: all 1s 0.5s;
+                    .imgShapes {
+                            @include flexCenter();
+                            justify-content: space-between;
+                            .shape {
+                                img {
+                                    transform: translateY(40px);
+                                    width: 30px;
+                                    @include animation(animation1,1s);
+                                }
+                                &.shape1{
+                                    img{
+                                        transform: translateY(120px);
+                                        margin-left: 30px;
+                                        animation-delay: 0.3s;
+                                    }
+                                }
+                                &.shape2{
+                                    img{
+                                        
+                                        animation-delay: 0.5s;
+                                    }
+                                }
+                                &.shape3{
+                                    img{
+                                        transform: translateY(120px);
+                                        margin-right: 30px;
+                                        animation-delay: 0.7s;
+                                    }
+                                }
+                            }
+                    }
+                    .boxImgCon{
+                        .imgCon:nth-of-type(1){
+                            @include flexCenter();
+                            img{
+                                @include animation(animation2, 1s);
+                                transform: translateY(55px);
+                                width: 150px;
+                                @include responsive(350){
+                                    width: 100px;
+                                @include animation(animation3, 1s);
+                                }
+                            }
+                        }
+                        .imgCon:nth-of-type(2) {
+                            img {
+                                width: 280px;
+                                @include responsive(350){
+                                    width: 200px;
+                                }
+                            }
+                        }
+                    }
+                }
+                .boxText{
+                    opacity: 0;
+                    transform: translateY(30px);
+                    transition: all 1s 1s;
+                    .headBox{
+                        @include flexCenter();
+                        gap: 20px;
+                        .imgCon{
+                            @include flexCenter();
+                            img{
+                                width: 30px;
+                                @include animation(animation1,1s)
+                            }
+                            &.imgCon2{
+                                img {
+                                    margin-top: 7px;
+                                    animation-delay: 0.3s;
+                                }
+                            }
+                        }
+                        h1.library {
+                                font-size: 70px;
+                                @include responsive(350) {
+                                    font-size: 50px;
+                                }
+                                color: #FFFFFF;
+                                text-shadow: 0px 5px 38px #fff;
+                        }
+                    }
+                    .textanim{
+                        font-size: 50px;
+                        @include responsive(350) {
+                            font-size: 30px;
+                        }
+                        @include responsive(450) {
+                            font-size: 37px;
+                        }
+                        color: white;
+                        span{
+                            &.cd-words-wrapper{
+                                text-align: center;
+                                width: 150px!important;
+                                @include responsive(350) {
+                                    width: 40px!important;
+                                }
+                                @include responsive(650) {
+                                    width: 150px!important;
+                                }
+                            }
+                            b{
+                                @include responsive(650) {
+                                        margin-top: 0;
+                                    }
+                                margin-top: 10px!important;
+                                
+                                font-size: 40px;
+                                @include flexCenter();
+                                gap: 10px;
+                                i{
+                                    font-size: 30px;
+                                }
+                                p{
+                                    @include responsive(350) {
+                                        display: none;
+                                    }
+                                    @include responsive(650) {
+                                        display: initial!important;
+                                    }
+                                }
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .section2{
+        background-image: url("../imgs/haidan-8Kg-2kK97Xc-unsplash.jpg");
+        @include Position($type: relative);
+        &::before {
+                @include shapeNav($w: 100%, $h: 100%, $color: black, $opacity: 0.7);
+                @include Position($type: absolute, $t: 0, $r: 0);
+                z-index: -1;
+        }
+        &.active{
+            .box{
+                transform: translateY(0)!important;
+                &.person1 {
+                    transition-delay: 1s!important;
+                }
+            
+                &.person2 {
+                    transition-delay: 1.5s!important;
+                }
+            
+                &.person3 {
+                    transition-delay: 2s!important;
+                }
+            
+                &.person4 {
+                    transition-delay: 2.5s!important;
+                }
+            }
+            .textBox{
+                transform: translateY(20%)!important;
+            }
+        }
+        .container{
+            
+            .textBox{
+                margin-top: 50px;
+                @include flexCenter();
+                transform: translateY(-120%);
+                transition: all 1s 0.5s;
+                gap: 10px;
+                img{
+                    width: 30px;
+                    @include animation(animation1, 1s);
+                    &:nth-last-of-type(2){
+                        animation-delay: 0.5s;
+                    }
+                }
+                h2{
+                    font-size: 50px;
+                    color: white;
+                    text-shadow: 0px 5px 38px #fff;
+                }
+            }
+            .personCon{
+                @include Position($type: absolute,$b: 40px);
+                @include responsive(350) {
+                        overflow-x:auto ;
+                    }
+                .row{
+                    @include responsive(350){
+                        flex-wrap: nowrap!important;
+                        width: max-content;
+                    }
+                    .column {
+                        @include responsive(350) {
+                                width: 350px;
+                            }
+                            padding: 20px;
+                            transform: scale(0.9);
+                            transition: all 0.5s;
+                            overflow: hidden;
+                    
+                            &:hover {
+                                transform: scale(1);
+                            }
+                    
+                            .box {
+                                height: 350px;
+                                width: 300px;
+                                border-radius: 15px;
+                                overflow: hidden;
+                                box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+                                @include Position($type: relative);
+                                transform: translateY(150%);
+                    
+                                &:hover {
+                                    .shape {
+                                        .textCon {
+                                            p {
+                                                text-shadow: 0px 5px 18px #ffffff !important;
+                                            }
+                                        }
+                                    }
+                                }
+                    
+                                transition: all 1s;
+                                cursor: pointer;
+                    
+                                .shape {
+                                    @include size(100%, 100%);
+                                    @include Position($type: absolute, $t: 0, $r: 0);
+                                    background-color: rgba(0, 0, 0, 0.5);
+                                    @include flexCenter(column);
+                    
+                                    .textCon {
+                                        @include flexCenter();
+                                        font-size: 30px;
+                                        color: white;
+                                        text-shadow: 0px 5px 38px #fff;
+                    
+                                        p {
+                                            transition: all 0.5s;
+                    
+                                        }
+                                    }
+                    
+                                    .btnCon {
+                                        width: 100%;
+                                        @include Position($type: absolute, $b: 30px, $r: 0);
+                                        @include flexCenter();
+                    
+                                        button {
+                                            width: 80%;
+                                            background-color: transparent;
+                                            border: 2px solid white;
+                                            border-radius: 20px;
+                                            padding: 7px 20px;
+                                            color: white;
+                                            font-size: 20px;
+                                            font-family: 'Rubik';
+                                            font-weight: 600;
+                                            overflow: hidden;
+                                            transition: all 0.5s;
+                                            @include Position($type: relative);
+                                            @include flexCenter();
+                                            gap: 40px;
+                    
+                                            .imgCon {
+                                                transition: all 0.5s;
+                    
+                                                img {
+                                                    width: 25px;
+                                                    height: 25px;
+                                                }
+                    
+                                                &.img1 {
+                                                    transform: translateX(-210%);
+                                                }
+                    
+                                                &.img2 {
+                                                    transform: translateX(210%);
+                    
+                                                    img {
+                                                        transform: rotate(180deg);
+                                                    }
+                                                }
+                                            }
+                    
+                                            &:hover {
+                                                transform: scale(0.95);
+                    
+                                                .img1 {
+                                                    transform: translateX(0);
+                                                }
+                    
+                                                .img2 {
+                                                    transform: translateX(0);
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                    
+                                img {
+                                    width: 100%;
+                                    height: 100%;
+                    
+                                }
+                            }
+                    }
+                }
+            }
+        }
+    }
+}

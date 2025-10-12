@@ -1,0 +1,14 @@
+@use "variables" as *;
+@use "mixin" as *;
+.font1{
+    font-family: "tilth";
+}
+.font2{
+    font-family: "Dewan";
+}
+.font3{
+    font-family: "main";
+}
+body{
+    background-image: url("../imgs/ChatGPT\ Image\ Oct\ 13\,\ 2025\,\ 12_25_21\ AM.png");
+}
