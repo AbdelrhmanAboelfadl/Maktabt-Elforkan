@@ -3,6 +3,11 @@ header{
     .section{
         height: 100%;
         @include bgImg();
+        &::before {
+                @include shapeNav($w: 100%, $h: 100%, $color: black, $opacity: 0.7);
+                @include Position($type: absolute, $t: 0, $r: 0);
+                z-index: -1;
+        }
     }
     .section1{
         &.active{
@@ -16,12 +21,6 @@ header{
             }
         }
         background-image: url("../imgs/ChatGPT\ Image\ Oct\ 13\,\ 2025\,\ 12_25_21\ AM.png");
-        background-attachment: fixed;
-        &::before{
-            @include shapeNav($w: 100%, $h: 100%, $color:black, $opacity: 0.7);
-            @include Position($type: absolute, $t: 0, $r: 0);
-            z-index: -1;
-        }
         .container {
             padding-top: 20px;
             @include flexCenter();
@@ -163,16 +162,14 @@ header{
         }
     }
     .section2{
-        background-image: url("../imgs/haidan-8Kg-2kK97Xc-unsplash.jpg");
-        @include Position($type: relative);
+        background-image: url("../imgs/49278698859241.jpg");
         &::before {
-                @include shapeNav($w: 100%, $h: 100%, $color: black, $opacity: 0.7);
-                @include Position($type: absolute, $t: 0, $r: 0);
-                z-index: -1;
+                opacity: 0.3;
         }
         &.active{
             .box{
                 transform: translateY(0)!important;
+                opacity: 1!important;
                 &.person1 {
                     transition-delay: 1s!important;
                 }
@@ -194,7 +191,6 @@ header{
             }
         }
         .container{
-            
             .textBox{
                 margin-top: 50px;
                 @include flexCenter();
@@ -245,7 +241,7 @@ header{
                                 box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
                                 @include Position($type: relative);
                                 transform: translateY(150%);
-                    
+                                opacity: 0;
                                 &:hover {
                                     .shape {
                                         .textCon {
@@ -345,4 +341,143 @@ header{
             }
         }
     }
+    .section3{
+        background-image: url("../imgs/ChatGPT\ Image\ Oct\ 14\,\ 2025\,\ 12_23_12\ AM.png");
+        &::before{
+            opacity: 0.3;
+        }
+        &.active{
+            .box{
+                opacity: 1 !important;
+            }
+        }
+        .bigBoxForShapes{
+            position: relative;
+            img{
+                position: absolute;
+                @include animation(animation1, 2s);
+                width: 35px;
+                transform: rotate(35deg);
+                filter: blur(1.5px) saturate(300%);
+                &:nth-of-type(1){
+                    top: 200px;
+                    left: 50px;
+                }
+                &:nth-of-type(2){
+                    top: 50%;
+                    left: 200px;
+                    animation-delay: 0.5s;
+                }
+                &:nth-of-type(3){
+                    bottom: 120px;
+                    left: 50px;
+                    animation-delay: 1s;
+                }
+                &:nth-of-type(4){
+                    top: 200px;
+                    right: 50px;
+                    animation-delay: 1.5s;
+                }
+                &:nth-of-type(5){
+                    top:50%;
+                    right: 200px;
+                    animation-delay: 2s;
+                }
+                &:nth-of-type(6){
+                    right: 50px;
+                    bottom: 120px;
+                    animation-delay: 2.5s;
+                }
+            }
+            @include size(100%,100%);
+            backdrop-filter: blur(5px) saturate(700%);
+            background: rgba(0, 0, 0, 0.348);
+            .box {
+                    @include flexCenter(column);
+                    @include responsive(350) {
+                        width: initial !important;
+                        height: initial !important;
+                    }
+                    @include responsive(850) {
+                        width: 600px !important;
+                        height: initial !important;
+                    }
+                    @include Position($type: relative);
+                    @include bgImg();
+                    padding: 20px;
+                    &::before {
+                        @include shapeNav($w: 100%, $h: 100%, $color: black, $opacity: 0.7);
+                        @include Position($type: absolute, $t: 0, $r: 0);
+                        z-index: 0;
+                    }
+                    width: 650px;
+                    border-radius: 30px;
+                    overflow: hidden;
+                    background-image: url("../../../imgs/9019777.jpg");
+                    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+                    opacity: 0;
+                    transition: all 2s 1s;
+                    .textBox{
+                        @include flexCenter();
+                        color: white;
+                        h2{
+                            font-size: 50px
+                        }
+                    }
+                    .column {
+                        
+                        .con {
+                            @include flexCenter(column);
+                            padding: 10px;
+                            label {
+                                width: 100%;
+                                text-align: center;
+            
+                                p {
+                                    color: white;
+                                    font-size: 20px;
+                                }
+                            }
+                            select {
+                                @include responsive(350){
+                                    text-align: center!important;
+                                }
+                                @include responsive(850){
+                                    text-align: end!important;
+                                }
+                                width: 100%;
+                                padding: 8px;
+                                border-radius: 5px;
+                                background-color: transparent;
+                                border: 2px solid blue;
+                                text-align: end;
+                                color: white;
+                                font-family: "main";
+                                transition: all 0.5s;
+                                cursor: pointer;
+                                option {
+                                    color: black;
+                                    text-align: center;
+                                    font-family: "main";
+                                    cursor: pointer !important;
+                                    border-radius: 10px;            
+                                }
+                            }
+                        }
+                    }
+                    audio {
+                        width: 100%;
+            
+                    }
+            }
+        }
+    }
+}
+.loading{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
 }

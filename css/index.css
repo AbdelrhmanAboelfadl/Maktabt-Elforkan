@@ -10,10 +10,6 @@
   font-family: "main";
 }
 
-body {
-  background-image: url("../imgs/ChatGPT Image Oct 13, 2025, 12_25_21 AM.png");
-}
-
 @keyframes animation1 {
   from {
     opacity: 0;
@@ -44,19 +40,7 @@ header .section {
   background-position: center;
   background-repeat: no-repeat;
 }
-header .section1.active .boxImg {
-  opacity: 1 !important;
-  transform: translateY(0) !important;
-}
-header .section1.active .boxText {
-  opacity: 1 !important;
-  transform: translateY(0) !important;
-}
-header .section1 {
-  background-image: url("../imgs/ChatGPT Image Oct 13, 2025, 12_25_21 AM.png");
-  background-attachment: fixed;
-}
-header .section1::before {
+header .section::before {
   content: "";
   display: block;
   width: 100%;
@@ -69,6 +53,17 @@ header .section1::before {
   bottom: initial;
   left: initial;
   z-index: -1;
+}
+header .section1.active .boxImg {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+header .section1.active .boxText {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+header .section1 {
+  background-image: url("../imgs/ChatGPT Image Oct 13, 2025, 12_25_21 AM.png");
 }
 header .section1 .container {
   padding-top: 20px;
@@ -250,29 +245,14 @@ header .section1 .container .bigBox .boxText .textanim span b i {
   }
 }
 header .section2 {
-  background-image: url("../imgs/haidan-8Kg-2kK97Xc-unsplash.jpg");
-  position: relative;
-  top: initial;
-  right: initial;
-  bottom: initial;
-  left: initial;
+  background-image: url("../imgs/49278698859241.jpg");
 }
 header .section2::before {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 100%;
-  background-color: black;
-  opacity: 0.7;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: initial;
-  left: initial;
-  z-index: -1;
+  opacity: 0.3;
 }
 header .section2.active .box {
   transform: translateY(0) !important;
+  opacity: 1 !important;
 }
 header .section2.active .box.person1 {
   transition-delay: 1s !important;
@@ -359,6 +339,7 @@ header .section2 .container .personCon .row .column .box {
   bottom: initial;
   left: initial;
   transform: translateY(150%);
+  opacity: 0;
 }
 header .section2 .container .personCon .row .column .box:hover .shape .textCon p {
   text-shadow: 0px 5px 18px #ffffff !important;
@@ -457,6 +438,182 @@ header .section2 .container .personCon .row .column .box img {
   width: 100%;
   height: 100%;
 }
+header .section3 {
+  background-image: url("../imgs/ChatGPT Image Oct 14, 2025, 12_23_12 AM.png");
+}
+header .section3::before {
+  opacity: 0.3;
+}
+header .section3.active .box {
+  opacity: 1 !important;
+}
+header .section3 .bigBoxForShapes {
+  position: relative;
+}
+header .section3 .bigBoxForShapes img {
+  position: absolute;
+  animation-name: animation1;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  width: 35px;
+  transform: rotate(35deg);
+  filter: blur(1.5px) saturate(300%);
+}
+header .section3 .bigBoxForShapes img:nth-of-type(1) {
+  top: 200px;
+  left: 50px;
+}
+header .section3 .bigBoxForShapes img:nth-of-type(2) {
+  top: 50%;
+  left: 200px;
+  animation-delay: 0.5s;
+}
+header .section3 .bigBoxForShapes img:nth-of-type(3) {
+  bottom: 120px;
+  left: 50px;
+  animation-delay: 1s;
+}
+header .section3 .bigBoxForShapes img:nth-of-type(4) {
+  top: 200px;
+  right: 50px;
+  animation-delay: 1.5s;
+}
+header .section3 .bigBoxForShapes img:nth-of-type(5) {
+  top: 50%;
+  right: 200px;
+  animation-delay: 2s;
+}
+header .section3 .bigBoxForShapes img:nth-of-type(6) {
+  right: 50px;
+  bottom: 120px;
+  animation-delay: 2.5s;
+}
+header .section3 .bigBoxForShapes {
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(5px) saturate(700%);
+  background: rgba(0, 0, 0, 0.348);
+}
+header .section3 .bigBoxForShapes .box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 1300px) {
+  header .section3 .bigBoxForShapes .box {
+    width: initial !important;
+    height: initial !important;
+  }
+}
+@media (min-width: 769px) and (max-width: 1300px) {
+  header .section3 .bigBoxForShapes .box {
+    width: 600px !important;
+    height: initial !important;
+  }
+}
+header .section3 .bigBoxForShapes .box {
+  position: relative;
+  top: initial;
+  right: initial;
+  bottom: initial;
+  left: initial;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 20px;
+}
+header .section3 .bigBoxForShapes .box::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.7;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: initial;
+  left: initial;
+  z-index: 0;
+}
+header .section3 .bigBoxForShapes .box {
+  width: 650px;
+  border-radius: 30px;
+  overflow: hidden;
+  background-image: url("../../../imgs/9019777.jpg");
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  opacity: 0;
+  transition: all 2s 1s;
+}
+header .section3 .bigBoxForShapes .box .textBox {
+  display: flex;
+  flex-direction: initial;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+header .section3 .bigBoxForShapes .box .textBox h2 {
+  font-size: 50px;
+}
+header .section3 .bigBoxForShapes .box .column .con {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+header .section3 .bigBoxForShapes .box .column .con label {
+  width: 100%;
+  text-align: center;
+}
+header .section3 .bigBoxForShapes .box .column .con label p {
+  color: white;
+  font-size: 20px;
+}
+@media (max-width: 1300px) {
+  header .section3 .bigBoxForShapes .box .column .con select {
+    text-align: center !important;
+  }
+}
+@media (min-width: 769px) and (max-width: 1300px) {
+  header .section3 .bigBoxForShapes .box .column .con select {
+    text-align: end !important;
+  }
+}
+header .section3 .bigBoxForShapes .box .column .con select {
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  background-color: transparent;
+  border: 2px solid blue;
+  text-align: end;
+  color: white;
+  font-family: "main";
+  transition: all 0.5s;
+  cursor: pointer;
+}
+header .section3 .bigBoxForShapes .box .column .con select option {
+  color: black;
+  text-align: center;
+  font-family: "main";
+  cursor: pointer !important;
+  border-radius: 10px;
+}
+header .section3 .bigBoxForShapes .box audio {
+  width: 100%;
+}
+
+.loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10000;
+}
 
 nav {
   position: fixed !important;
@@ -515,6 +672,7 @@ nav .logo .navbar-brand:focus {
   nav .collapse ul {
     text-align: center;
     padding-block: 20px;
+    flex-direction: column-reverse;
   }
 }
 @media (min-width: 769px) and (max-width: 1300px) {

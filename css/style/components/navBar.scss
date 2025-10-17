@@ -46,6 +46,7 @@ nav{
             @include responsive(350) {
                     text-align: center;
                     padding-block: 20px;
+                    flex-direction: column-reverse;
                 }
                 @include responsive(850) {
                     text-align: center;
