@@ -393,8 +393,15 @@ header{
             backdrop-filter: blur(5px) saturate(700%);
             background: rgba(0, 0, 0, 0.348);
             .box {
+                .info{
+                    @include responsive(350){
+                        flex-direction: column-reverse;
+                        width: 100%!important;
+                    }
+                }
                     @include flexCenter(column);
                     @include responsive(350) {
+                        
                         width: initial !important;
                         height: initial !important;
                     }
@@ -418,14 +425,30 @@ header{
                     opacity: 0;
                     transition: all 2s 1s;
                     .textBox{
-                        @include flexCenter();
-                        color: white;
-                        h2{
-                            font-size: 50px
+                        .boxTitle{
+                            @include flexCenter();
+                                gap: 30px;
+                                color: white;
+                                h2 {
+                                    font-size: 50px
+                                }
+                                img{
+                                    position: initial!important;
+                                    width: 30px;
+                                    display: none;
+                                    animation-name: animation1;
+                                    filter: none;
+                                    &.play{
+                                        display: initial!important;
+                                    }
+                                }
                         }
+                       
                     }
                     .column {
-                        
+                        @include responsive(1050){
+                            width: 100%;
+                        }
                         .con {
                             @include flexCenter(column);
                             padding: 10px;
@@ -473,11 +496,4 @@ header{
         }
     }
 }
-.loading{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 10000;
-}
+

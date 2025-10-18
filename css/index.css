@@ -34,6 +34,16 @@
     transform: translateY(40px);
   }
 }
+@keyframes bars-j7enxv {
+  100% {
+    background-position: left top, center top, right top;
+  }
+}
+@keyframes progress-pf82op {
+  100% {
+    inset: 0;
+  }
+}
 header .section {
   height: 100%;
   background-size: cover;
@@ -496,6 +506,12 @@ header .section3 .bigBoxForShapes {
   backdrop-filter: blur(5px) saturate(700%);
   background: rgba(0, 0, 0, 0.348);
 }
+@media (max-width: 1300px) {
+  header .section3 .bigBoxForShapes .box .info {
+    flex-direction: column-reverse;
+    width: 100% !important;
+  }
+}
 header .section3 .bigBoxForShapes .box {
   display: flex;
   flex-direction: column;
@@ -548,15 +564,31 @@ header .section3 .bigBoxForShapes .box {
   opacity: 0;
   transition: all 2s 1s;
 }
-header .section3 .bigBoxForShapes .box .textBox {
+header .section3 .bigBoxForShapes .box .textBox .boxTitle {
   display: flex;
   flex-direction: initial;
   justify-content: center;
   align-items: center;
+  gap: 30px;
   color: white;
 }
-header .section3 .bigBoxForShapes .box .textBox h2 {
+header .section3 .bigBoxForShapes .box .textBox .boxTitle h2 {
   font-size: 50px;
+}
+header .section3 .bigBoxForShapes .box .textBox .boxTitle img {
+  position: initial !important;
+  width: 30px;
+  display: none;
+  animation-name: animation1;
+  filter: none;
+}
+header .section3 .bigBoxForShapes .box .textBox .boxTitle img.play {
+  display: initial !important;
+}
+@media (min-width: 992px) and (max-width: 1300px) {
+  header .section3 .bigBoxForShapes .box .column {
+    width: 100%;
+  }
 }
 header .section3 .bigBoxForShapes .box .column .con {
   display: flex;
@@ -604,15 +636,6 @@ header .section3 .bigBoxForShapes .box .column .con select option {
 }
 header .section3 .bigBoxForShapes .box audio {
   width: 100%;
-}
-
-.loading {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 10000;
 }
 
 nav {
@@ -734,6 +757,198 @@ nav .collapse ul li a:hover {
 }
 nav .collapse ul li a:focus {
   color: white;
+}
+
+.pop {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: initial;
+  left: initial;
+  backdrop-filter: blur(5px) saturate(100%);
+  background: rgba(0, 0, 0, 0.348);
+  z-index: 1010;
+}
+.pop .pop-box {
+  position: absolute;
+  top: 50%;
+  right: initial;
+  bottom: initial;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("../imgs/36e84f89-5611-4cc4-b006-cf3b34de4112.jpg");
+  width: 700px;
+  padding-block: 30px;
+  border-radius: 15px;
+  border: 2px solid blue;
+}
+.pop .pop-box::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.619);
+  opacity: 0.7;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: initial;
+  left: initial;
+}
+.pop .pop-box .box {
+  display: flex;
+  flex-direction: initial;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 1300px) {
+  .pop .pop-box .box .item .textBox1 {
+    margin-bottom: 0 !important;
+  }
+}
+.pop .pop-box .box .item .textBox1 {
+  margin-bottom: 25px !important;
+  padding: 0 !important;
+}
+.pop .pop-box .box .item .textBox1 h2 {
+  font-size: 65px;
+  color: white;
+}
+@media (max-width: 1300px) {
+  .pop .pop-box .box .item .column1 {
+    margin-bottom: 30px;
+  }
+}
+.pop .pop-box .box .item label {
+  width: 100%;
+  text-align: center;
+}
+.pop .pop-box .box .item label p {
+  color: white;
+  font-size: 20px;
+}
+@media (max-width: 1300px) {
+  .pop .pop-box .box .item select {
+    text-align: center !important;
+  }
+}
+@media (min-width: 769px) and (max-width: 1300px) {
+  .pop .pop-box .box .item select {
+    text-align: end !important;
+  }
+}
+.pop .pop-box .box .item select {
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  background-color: transparent;
+  border: 2px solid blue;
+  text-align: end;
+  color: white;
+  font-family: "main";
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.pop .pop-box .box .item select option {
+  color: black;
+  text-align: center;
+  font-family: "main";
+  cursor: pointer !important;
+  border-radius: 10px;
+}
+.pop .pop-box .box .item .audio {
+  display: flex;
+  flex-direction: initial;
+  justify-content: center;
+  align-items: center;
+  margin-right: 0;
+  padding-right: 0px;
+}
+.pop .pop-box .box .item .audio #player {
+  width: 100%;
+  margin: auto;
+}
+
+.loading {
+  position: absolute;
+  top: 0;
+  right: initial;
+  bottom: initial;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: initial;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(5px) saturate(100%);
+  background: rgba(0, 0, 0, 0.819);
+  z-index: 101010;
+}
+.loading .box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.loading .box .text {
+  display: flex;
+  flex-direction: initial;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.loading .box .text .bars {
+  width: 50.4px;
+  height: 44.8px;
+  background: linear-gradient(rgba(0, 0, 0, 0) 16.6666666667%, #ffffff 0 50%, rgba(0, 0, 0, 0) 0) left bottom, linear-gradient(rgba(0, 0, 0, 0) 33.3333333333%, #ffffff 0 66.6666666667%, rgba(0, 0, 0, 0) 0) center bottom, linear-gradient(rgba(0, 0, 0, 0) 50%, #ffffff 0 83.3333333333%, rgba(0, 0, 0, 0) 0) right bottom;
+  background-size: 10.1px 600%;
+  background-repeat: no-repeat;
+  animation: bars-j7enxv 1s infinite linear;
+}
+.loading .box .text .bars1 {
+  transform: rotateY(180deg);
+}
+.loading .box .text h2 {
+  font-size: 80px;
+  color: white;
+}
+.loading .box .text2 {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  color: white;
+}
+.loading .box .text2 h2 {
+  margin-bottom: 0;
+}
+.loading .box .text2 .progress {
+  background: transparent;
+  border: 2px solid white;
+  transform: rotateY(180deg) !important;
+  width: 120px;
+  height: 20px;
+  border-radius: 22.4px;
+  color: transparent;
+  position: relative;
+}
+.loading .box .text2 .progress::before {
+  content: "";
+  position: absolute;
+  margin: 2.2px;
+  inset: 0 100% 0 0;
+  border-radius: inherit;
+  background: rgb(255, 255, 255);
+  animation: progress-pf82op 2.4s infinite alternate;
 }
 
 /*# sourceMappingURL=index.css.map */

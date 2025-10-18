@@ -16,7 +16,6 @@
     <title >مكتبة الفرقان</title>
 </head>
 <body>
-
     <nav class="navbar navbar-expand-lg ">
         <div class="container-fluid">
             <div class="logo">
@@ -45,7 +44,6 @@
             </div>
         </div>
     </nav>
-
     <header class="vh-100" id="Home">
         <div id="pagepiling" class="h-100">
             <div id="section1" class="section section1 py-5" >
@@ -114,8 +112,7 @@
                                             <p class="m-0 d-inline font1"> / الشّيخ</p>
                                         </div>
                                         <div class="btnCon">
-                                            
-                                            <button type="submit">
+                                            <button type="submit" onclick="getMoushaf(51) ; openNav(`.pop`)">
                                                 <div class="img1 imgCon">
                                                     <img src="imgs/icons/volume.png">
                                                 </div>
@@ -124,7 +121,6 @@
                                                     <img src="imgs/icons/volume.png">
                                                 </div>
                                             </button>
-                                            
                                         </div>
                                     </div>
                                 </div>
@@ -139,7 +135,7 @@
                                         </div>
                                         <div class="btnCon">
                                         
-                                            <button type="submit">
+                                            <button type="submit" onclick="getMoushaf(112); openNav(`.pop`)">
                                                 <div class="img1 imgCon">
                                                     <img src="imgs/icons/volume.png">
                                                 </div>
@@ -162,8 +158,7 @@
                                             <p class="m-0 d-inline font1"> / الشّيخ</p>
                                         </div>
                                         <div class="btnCon">
-                                        
-                                            <button type="submit">
+                                            <button type="submit" onclick="getMoushaf(121) ; openNav(`.pop`)">
                                                 <div class="img1 imgCon">
                                                     <img src="imgs/icons/volume.png">
                                                 </div>
@@ -172,7 +167,6 @@
                                                     <img src="imgs/icons/volume.png">
                                                 </div>
                                             </button>
-                                        
                                         </div>
                                     </div>
                                 </div>
@@ -187,7 +181,7 @@
                                         </div>
                                         <div class="btnCon">
                                         
-                                            <button type="submit">
+                                            <button type="button" onclick="getMoushaf(118) ; openNav(`.pop`)">
                                                 <div class="img1 imgCon">
                                                     <img src="imgs/icons/volume.png">
                                                 </div>
@@ -204,51 +198,102 @@
                         </div>
                     </div>
                 </div>
+                <div class="pop" onclick=" closeNav(`.pop`);stop()">
+                    <div class="pop-box">
+                        <div class="bigBoxForShapes w-100 h-100">
+                            <div class="container h-100 d-flex justify-content-center align-items-center">
+                                <div class="box w-100 h-100 " >
+                                    <div class="item w-100 h-100">
+                                        <div class="row  textBox1 w-100 text-center pt-5 mt-5 position-relative">
+                                            <div class="boxTitle w-100 position-relative">
+                                                <h2 class="font2">القران الكريم</h2>
+                                            </div>
+                                        </div>
+                                        <div class="row position-relative w-100 m-2 info justify-content-evenly">
+                                            <div class="col-md-4 col2 column column1">
+                                                <div class="soraNameCon con">
+                                                    <label for="sora">
+                                                        <p class="font3">أسم السورة</p>
+                                                    </label>
+                                                    <select id="sora" class="sora">
+                                        
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 col3 column">
+                                                <div class="systemNameCon con">
+                                                    <label for="system">
+                                                        <p class="font3">اختر الرواية</p>
+                                                    </label>
+                                                    <select id="system" class="system">
+                                        
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row w-100 mt-5">
+                                            <div class="col-12 audio">
+                                                <audio id="player" controls autoplay muted>
+                                                    <source src="" type="audio/ogg">
+                                                    <source src="" type="audio/mpeg">
+                                                </audio>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
             <div id="section3" class="section section3 ">
                 <div class="bigBoxForShapes">
                     <div class="container h-100 d-flex justify-content-center align-items-center">
                         <div class="box">
                             <div class="row  textBox w-100 text-center pt-5 mt-5 position-relative">
-                                <h2 class="font2">القران الكريم</h2>
+                                <div class="boxTitle w-100 position-relative">
+                                    <img src="imgs/icons/space.png" class="imgTitleBox">
+                                    <h2 class="font2">القران الكريم</h2>
+                                    <img src="imgs/icons/space.png" class="imgTitleBox">
+                                </div>
                             </div>
                             <div class="row position-relative w-100 m-2 info">
-                                <div class="col-md-4 col2 column">
+                                <div class="col-lg-4 col2 column">
                                     <div class="soraNameCon con">
                                         <label for="sora">
                                             <p class="font3">أسم السورة</p>
                                         </label>
-                                        <select class="sora" aria-placeholder="asdsad">
-                                            <option value=""></option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 col3 column">
-                                    <div class="systemNameCon con">
-                                        <label for="system">
-                                            <p class="font3">اختر الرواية</p>
-                                        </label>
-                                        <select id="system" class="system">
+                                        <select id="sora2" class="sora">
                                             
                                         </select>
                                     </div>
                                 </div>
-                                <div class="col-md-4 col1 column">
+                                <div class="col-lg-4 col3 column">
+                                    <div class="systemNameCon con">
+                                        <label for="system">
+                                            <p class="font3">اختر الرواية</p>
+                                        </label>
+                                        <select id="system2" class="system">
+                                            
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col1 column">
                                     <div class="readNameCon con">
                                         <label for="name">
                                             <p class="font3">اسم القارئ</p>
                                         </label>
-                                        <select id="reciters"  class="name">
+                                        <select id="reciters2"  class="name">
                                         </select>
                                     </div>
                                 </div>
                             </div>
                             <div class="row w-100 mt-5">
                                 <div class="col-12">
-                                    <audio controls autoplay muted>
+                                    <audio id="player2" controls autoplay muted>
                                         <source src="" type="audio/ogg">
                                         <source src="" type="audio/mpeg">
-                                        Your browser does not support the audio element.
                                     </audio>
                                 </div>
                             </div>
@@ -258,7 +303,20 @@
             </div>
         </div>
     </header>
-
+    <div class="loading">
+        <div class="box">
+            <div class="text">
+                <div class="bars bars1"></div>
+                <h2 class="font2">مكتبة افرقان</h2>
+                <div class="bars"></div>
+            </div>
+            <div class="text2">
+                <h2>جاري التحميل</h2>
+                <div class="progress"></div>
+            </div>
+        </div>
+    </div>
+    
 
 
 
