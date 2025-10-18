@@ -13,6 +13,15 @@
         @include bgImg();
         background-image: url("../imgs/36e84f89-5611-4cc4-b006-cf3b34de4112.jpg");
         width: 700px;
+        @include responsive(350){
+            width: 100%;
+        }
+        @include responsive(650){
+            width: 500px;
+        }
+        @include responsive(850){
+            width: 700px;
+        }
         padding-block: 30px;
         border-radius: 15px;
         border: 2px solid blue;

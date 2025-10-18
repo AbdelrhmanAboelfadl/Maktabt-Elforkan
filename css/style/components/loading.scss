@@ -25,6 +25,15 @@
                 transform: rotateY(180deg);
             }
             h2{
+                @include responsive(350){
+                    font-size: 50px!important;
+                }
+                @include responsive(450) {
+                    font-size: 55px !important;
+                }
+                @include responsive(650){
+                    font-size:80px!important;
+                }
                 font-size: 80px;
                 color: white;
             }
