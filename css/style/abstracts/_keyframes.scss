@@ -24,6 +24,17 @@
         transform: translateY(40px);
     }
 }
+@keyframes animation4 {
+    0%{
+        transform: translateX(0);
+    }
+    50%{
+        transform: translateX(10px);
+    }
+    100%{
+        transform: translateX(-10px);
+    }
+}
 @keyframes bars-j7enxv {
     100% {
         background-position: left top, center top, right top;

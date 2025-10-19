@@ -9,3 +9,31 @@
 .font3{
     font-family: "main";
 }
+.plyr--audio .plyr__controls {
+    border-radius: 10px;
+    background: transparent;
+    border: 2px solid blue;
+}
+.plyr__control svg {
+    color: white;
+}
+.plyr--audio .plyr__control:focus-visible,
+.plyr--audio .plyr__control:hover,
+.plyr--audio .plyr__control[aria-expanded=true] {
+    background: blue;
+   
+}
+.plyr__progress input[type=range] {
+    position: relative;
+    z-index: 2;
+    color: blue;
+}
+.plyr__controls .plyr__controls__item.plyr__time {
+    color: white;
+}
+.plyr__volume input[type=range] {
+    color: blue;
+}
+.plyr__menu__container .plyr__control[role=menuitemradio][aria-checked=true]:before {
+    background: #0003ff;
+}

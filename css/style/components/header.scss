@@ -234,6 +234,8 @@ header{
                         .column {
                             @include responsive(350) {
                                 width: 350px;
+                                flex: 0 0 350px; // كل عنصر ياخد 350px ثابت
+
                             }
             
                             padding: 20px;
@@ -407,6 +409,67 @@ header{
             backdrop-filter: blur(5px) saturate(700%);
             background: rgba(0, 0, 0, 0.348);
             .box {
+                &.shaked{
+                    @include animation(animation4, 0.2s);
+                }
+                .playerCon{
+                    padding: 10px;
+                }
+                .down{
+                    z-index: 101010;
+                    width: 100%;
+                    text-align: center;
+                    @include flexCenter();
+                    .columnDown{
+                        @include flexCenter();
+                        .boxdown {
+                                border: 2px solid blue;
+                                border-radius: 10px;
+                                width: fit-content;
+                                padding: 15px 20px;
+                                @include flexCenter();
+                                
+                                font-size: 20px;
+                                transition: all 0.5s;
+                                &:hover{
+                                    transform: translateY(-5px);
+                                    box-shadow: rgba(0, 0, 251, 0.45) 0px 25px 20px -20px;
+                                }
+                                a{
+                                    color: white;
+                                }
+                                .down{
+                                    width: 35px;
+                                    animation: none;
+                                    position: initial!important;
+                                    transform: rotate(0)!important;
+                                    filter: none!important;
+                                }
+                        }
+                        .alert{
+                            @include Position($type: absolute, $t: 50%, $r: 20px);
+                            @include responsive(350){
+                                display: none!important;
+
+                            }
+                            transform: translateY(200%);
+                            padding: 20px;
+                            border: 2px solid red;
+                            border-radius: 10px;
+                            opacity: 0;
+                            transition: all 0.5s;
+                            &.show{
+                                transform: translateY(-50%);
+                                opacity: 1;
+                            }
+                            h2{
+                                color: white;
+                                margin: 0;
+                            }
+                        }
+                    }
+                    
+                }
                 .info{
                     @include responsive(350){
                         flex-direction: column-reverse;

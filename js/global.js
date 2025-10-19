@@ -15,7 +15,5 @@ function closeNav(name) {
 }
 
 function stop() {
-    player.load();
     player.pause();
-    
 }

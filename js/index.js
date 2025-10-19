@@ -5,7 +5,20 @@ const rewaya = document.querySelector("#system");
 rewaya.innerHTML = `<option value="" disabled selected hidden>اختر الرواية</option>`;
 const suwars = document.querySelector("#sora");
 suwars.innerHTML += `<option value="" disabled selected hidden>اختر السورة</option>`;
-const player = document.querySelector("#player");
+const player = new Plyr('#player', {
+    controls: [
+        'play-large',
+        'play', 
+        'progress', 
+        'current-time', 
+        'mute', 
+        'volume', 
+        'settings',
+        'download'   
+    ],
+    settings: ['speed'], 
+    speed: { selected: 1, options: [0.5, 1, 1.25, 1.5, 2] } 
+});
 const apiUrl = 'https://www.mp3quran.net/api/v3';
 const endPoint = 'reciters';
 const language = 'ar';
@@ -15,8 +28,21 @@ const rewaya2 = document.querySelector("#system2");
 rewaya2.innerHTML = `<option value="" disabled selected hidden>اختر الرواية</option>`;
 const suwars2 = document.querySelector("#sora2");
 suwars2.innerHTML += `<option value="" disabled selected hidden>اختر السورة</option>`;
-const player2 = document.querySelector("#player2");
-
+const player2 = new Plyr('#player2', {
+    controls: [
+        'play-large',
+        'play', 
+        'progress', 
+        'current-time', 
+        'mute', 
+        'volume', 
+        'settings',  
+    ],
+    settings: ['speed'], 
+    speed: { selected: 1, options: [0.5, 1, 1.25, 1.5, 2] } 
+});
+const btnDownload = document.querySelector(".boxdown a");
+const messageAlert = document.querySelector(".alert");
 // =======================================================================================================
 
 // =============================================section2==================================================
@@ -65,10 +91,22 @@ suwars.addEventListener("change", (e) => {
     playSora(selectedSora.value);
 });
 function playSora(soraMp3) {
-    player.pause(); 
-    player.src = soraMp3;
-    player.load();
-    player.play();
+    player.pause();
+    player.source = {
+    type: 'audio',
+    sources: [{ src: soraMp3, type: 'audio/mp3' }]
+    
+};
+setTimeout(() => {
+    const downloadBtn = document.querySelector('.plyr__controls [data-plyr="download"]');
+    if (downloadBtn) {
+        const link = document.createElement('a');
+        link.href = soraMp3;
+        link.download = 'sura.mp3';
+        downloadBtn.setAttribute('href', soraMp3);
+        downloadBtn.setAttribute('download', 'sura.mp3');
+    }
+}, 500);
 };
 
 // ==================================================================================================
@@ -118,18 +156,39 @@ async function getReciters2() {
 
     suwars2.addEventListener("change", (e) => {
         const selectedSora = suwars2.options[suwars2.selectedIndex];
+        btnDownload.setAttribute("href", selectedSora.value);
         player2.pause();
-        player2.src = selectedSora.value;
-        player2.load();
-        player2.play();
-        player2.addEventListener("play", () => {
-            $(".imgTitleBox").addClass("play");
-        });
-    
-        player2.addEventListener("pause", () => {
-            $(".imgTitleBox").removeClass("play");
-        });
+        player2.source = {
+        type: 'audio',
+        sources: [{ src: selectedSora.value, type: 'audio/mp3' }]
+        };
+    setTimeout(() => player2.play(), 500);
+    player2.on('play', () => {
+        $(".imgTitleBox").addClass("play");
+    });
+    player2.on('pause', () => {
+        $(".imgTitleBox").removeClass("play");
+    });
+
+    });
+    btnDownload.addEventListener("click", (e) => {
+    e.preventDefault();
+    const selectedSora = suwars2.options[suwars2.selectedIndex];
+    if (!selectedSora || !selectedSora.value) {
+        $(".bigBoxForShapes .box").addClass("shaked");
+        setTimeout(function () {
+            $(".bigBoxForShapes .box").removeClass("shaked");
+        }, 500);
+        messageAlert.classList.add("show");
+        setTimeout(function () {
+            messageAlert.classList.remove("show");
+        },2000);
+    } else {
+        console.log("sora");
+        window.location.href = selectedSora.value;
+    }
 });
+
 };
 
 getReciters2();

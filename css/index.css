@@ -10,6 +10,40 @@
   font-family: "main";
 }
 
+.plyr--audio .plyr__controls {
+  border-radius: 10px;
+  background: transparent;
+  border: 2px solid blue;
+}
+
+.plyr__control svg {
+  color: white;
+}
+
+.plyr--audio .plyr__control:focus-visible,
+.plyr--audio .plyr__control:hover,
+.plyr--audio .plyr__control[aria-expanded=true] {
+  background: blue;
+}
+
+.plyr__progress input[type=range] {
+  position: relative;
+  z-index: 2;
+  color: blue;
+}
+
+.plyr__controls .plyr__controls__item.plyr__time {
+  color: white;
+}
+
+.plyr__volume input[type=range] {
+  color: blue;
+}
+
+.plyr__menu__container .plyr__control[role=menuitemradio][aria-checked=true]:before {
+  background: #0003ff;
+}
+
 @keyframes animation1 {
   from {
     opacity: 0;
@@ -32,6 +66,17 @@
   }
   to {
     transform: translateY(40px);
+  }
+}
+@keyframes animation4 {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(-10px);
   }
 }
 @keyframes bars-j7enxv {
@@ -327,6 +372,7 @@ header .section2 .container .parent .personCon {
 @media (max-width: 1300px) {
   header .section2 .container .parent .personCon .row .column {
     width: 350px;
+    flex: 0 0 350px;
   }
 }
 header .section2 .container .parent .personCon .row .column {
@@ -506,6 +552,85 @@ header .section3 .bigBoxForShapes {
   height: 100%;
   backdrop-filter: blur(5px) saturate(700%);
   background: rgba(0, 0, 0, 0.348);
+}
+header .section3 .bigBoxForShapes .box.shaked {
+  animation-name: animation4;
+  animation-duration: 0.2s;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+header .section3 .bigBoxForShapes .box .playerCon {
+  padding: 10px;
+}
+header .section3 .bigBoxForShapes .box .down {
+  z-index: 101010;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: initial;
+  justify-content: center;
+  align-items: center;
+}
+header .section3 .bigBoxForShapes .box .down .columnDown {
+  display: flex;
+  flex-direction: initial;
+  justify-content: center;
+  align-items: center;
+}
+header .section3 .bigBoxForShapes .box .down .columnDown .boxdown {
+  border: 2px solid blue;
+  border-radius: 10px;
+  width: fit-content;
+  padding: 15px 20px;
+  display: flex;
+  flex-direction: initial;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  transition: all 0.5s;
+}
+header .section3 .bigBoxForShapes .box .down .columnDown .boxdown:hover {
+  transform: translateY(-5px);
+  box-shadow: rgba(0, 0, 251, 0.45) 0px 25px 20px -20px;
+}
+header .section3 .bigBoxForShapes .box .down .columnDown .boxdown a {
+  color: white;
+}
+header .section3 .bigBoxForShapes .box .down .columnDown .boxdown .down {
+  width: 35px;
+  animation: none;
+  position: initial !important;
+  transform: rotate(0) !important;
+  filter: none !important;
+}
+header .section3 .bigBoxForShapes .box .down .columnDown .alert {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  bottom: initial;
+  left: initial;
+}
+@media (max-width: 1300px) {
+  header .section3 .bigBoxForShapes .box .down .columnDown .alert {
+    display: none !important;
+  }
+}
+header .section3 .bigBoxForShapes .box .down .columnDown .alert {
+  transform: translateY(200%);
+  padding: 20px;
+  border: 2px solid red;
+  border-radius: 10px;
+  opacity: 0;
+  transition: all 0.5s;
+}
+header .section3 .bigBoxForShapes .box .down .columnDown .alert.show {
+  transform: translateY(-50%);
+  opacity: 1;
+}
+header .section3 .bigBoxForShapes .box .down .columnDown .alert h2 {
+  color: white;
+  margin: 0;
 }
 @media (max-width: 1300px) {
   header .section3 .bigBoxForShapes .box .info {
