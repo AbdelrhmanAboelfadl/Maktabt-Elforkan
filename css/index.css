@@ -279,7 +279,7 @@ header .section2.active .box.person4 {
 header .section2.active .textBox {
   transform: translateY(20%) !important;
 }
-header .section2 .container .textBox {
+header .section2 .container .parent .textBox {
   margin-top: 50px;
   display: flex;
   flex-direction: initial;
@@ -289,7 +289,7 @@ header .section2 .container .textBox {
   transition: all 1s 0.5s;
   gap: 10px;
 }
-header .section2 .container .textBox img {
+header .section2 .container .parent .textBox img {
   width: 30px;
   animation-name: animation1;
   animation-duration: 1s;
@@ -297,47 +297,48 @@ header .section2 .container .textBox img {
   animation-direction: alternate;
   animation-iteration-count: infinite;
 }
-header .section2 .container .textBox img:nth-last-of-type(2) {
+header .section2 .container .parent .textBox img:nth-last-of-type(2) {
   animation-delay: 0.5s;
 }
-header .section2 .container .textBox h2 {
+header .section2 .container .parent .textBox h2 {
   font-size: 50px;
   color: white;
   text-shadow: 0px 5px 38px #fff;
 }
-header .section2 .container .personCon {
+header .section2 .container .parent .personCon {
   position: absolute;
-  top: initial;
-  right: initial;
   bottom: 40px;
-  left: initial;
 }
 @media (max-width: 1300px) {
-  header .section2 .container .personCon {
-    overflow-x: auto;
+  header .section2 .container .parent .personCon {
+    position: relative !important;
+    top: 60px;
+    overflow-x: auto !important;
+    white-space: nowrap;
   }
 }
 @media (max-width: 1300px) {
-  header .section2 .container .personCon .row {
+  header .section2 .container .parent .personCon .row {
     flex-wrap: nowrap !important;
-    width: max-content;
+    display: flex !important;
+    width: max-content !important;
   }
 }
 @media (max-width: 1300px) {
-  header .section2 .container .personCon .row .column {
+  header .section2 .container .parent .personCon .row .column {
     width: 350px;
   }
 }
-header .section2 .container .personCon .row .column {
+header .section2 .container .parent .personCon .row .column {
   padding: 20px;
   transform: scale(0.9);
   transition: all 0.5s;
   overflow: hidden;
 }
-header .section2 .container .personCon .row .column:hover {
+header .section2 .container .parent .personCon .row .column:hover {
   transform: scale(1);
 }
-header .section2 .container .personCon .row .column .box {
+header .section2 .container .parent .personCon .row .column .box {
   height: 350px;
   width: 300px;
   border-radius: 15px;
@@ -351,14 +352,14 @@ header .section2 .container .personCon .row .column .box {
   transform: translateY(150%);
   opacity: 0;
 }
-header .section2 .container .personCon .row .column .box:hover .shape .textCon p {
+header .section2 .container .parent .personCon .row .column .box:hover .shape .textCon p {
   text-shadow: 0px 5px 18px #ffffff !important;
 }
-header .section2 .container .personCon .row .column .box {
+header .section2 .container .parent .personCon .row .column .box {
   transition: all 1s;
   cursor: pointer;
 }
-header .section2 .container .personCon .row .column .box .shape {
+header .section2 .container .parent .personCon .row .column .box .shape {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -372,7 +373,7 @@ header .section2 .container .personCon .row .column .box .shape {
   justify-content: center;
   align-items: center;
 }
-header .section2 .container .personCon .row .column .box .shape .textCon {
+header .section2 .container .parent .personCon .row .column .box .shape .textCon {
   display: flex;
   flex-direction: initial;
   justify-content: center;
@@ -381,10 +382,10 @@ header .section2 .container .personCon .row .column .box .shape .textCon {
   color: white;
   text-shadow: 0px 5px 38px #fff;
 }
-header .section2 .container .personCon .row .column .box .shape .textCon p {
+header .section2 .container .parent .personCon .row .column .box .shape .textCon p {
   transition: all 0.5s;
 }
-header .section2 .container .personCon .row .column .box .shape .btnCon {
+header .section2 .container .parent .personCon .row .column .box .shape .btnCon {
   width: 100%;
   position: absolute;
   top: initial;
@@ -396,7 +397,7 @@ header .section2 .container .personCon .row .column .box .shape .btnCon {
   justify-content: center;
   align-items: center;
 }
-header .section2 .container .personCon .row .column .box .shape .btnCon button {
+header .section2 .container .parent .personCon .row .column .box .shape .btnCon button {
   width: 80%;
   background-color: transparent;
   border: 2px solid white;
@@ -419,32 +420,32 @@ header .section2 .container .personCon .row .column .box .shape .btnCon button {
   align-items: center;
   gap: 40px;
 }
-header .section2 .container .personCon .row .column .box .shape .btnCon button .imgCon {
+header .section2 .container .parent .personCon .row .column .box .shape .btnCon button .imgCon {
   transition: all 0.5s;
 }
-header .section2 .container .personCon .row .column .box .shape .btnCon button .imgCon img {
+header .section2 .container .parent .personCon .row .column .box .shape .btnCon button .imgCon img {
   width: 25px;
   height: 25px;
 }
-header .section2 .container .personCon .row .column .box .shape .btnCon button .imgCon.img1 {
+header .section2 .container .parent .personCon .row .column .box .shape .btnCon button .imgCon.img1 {
   transform: translateX(-210%);
 }
-header .section2 .container .personCon .row .column .box .shape .btnCon button .imgCon.img2 {
+header .section2 .container .parent .personCon .row .column .box .shape .btnCon button .imgCon.img2 {
   transform: translateX(210%);
 }
-header .section2 .container .personCon .row .column .box .shape .btnCon button .imgCon.img2 img {
+header .section2 .container .parent .personCon .row .column .box .shape .btnCon button .imgCon.img2 img {
   transform: rotate(180deg);
 }
-header .section2 .container .personCon .row .column .box .shape .btnCon button:hover {
+header .section2 .container .parent .personCon .row .column .box .shape .btnCon button:hover {
   transform: scale(0.95);
 }
-header .section2 .container .personCon .row .column .box .shape .btnCon button:hover .img1 {
+header .section2 .container .parent .personCon .row .column .box .shape .btnCon button:hover .img1 {
   transform: translateX(0);
 }
-header .section2 .container .personCon .row .column .box .shape .btnCon button:hover .img2 {
+header .section2 .container .parent .personCon .row .column .box .shape .btnCon button:hover .img2 {
   transform: translateX(0);
 }
-header .section2 .container .personCon .row .column .box img {
+header .section2 .container .parent .personCon .row .column .box img {
   width: 100%;
   height: 100%;
 }

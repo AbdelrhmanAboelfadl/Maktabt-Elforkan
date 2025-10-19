@@ -191,48 +191,60 @@ header{
             }
         }
         .container{
-            .textBox{
-                margin-top: 50px;
-                @include flexCenter();
-                transform: translateY(-120%);
-                transition: all 1s 0.5s;
-                gap: 10px;
-                img{
-                    width: 30px;
-                    @include animation(animation1, 1s);
-                    &:nth-last-of-type(2){
-                        animation-delay: 0.5s;
-                    }
+            .parent{
+                .textBox {
+                        margin-top: 50px;
+                        @include flexCenter();
+                        transform: translateY(-120%);
+                        transition: all 1s 0.5s;
+                        gap: 10px;
+                
+                        img {
+                            width: 30px;
+                            @include animation(animation1, 1s);
+                
+                            &:nth-last-of-type(2) {
+                                animation-delay: 0.5s;
+                            }
+                        }
+                
+                        h2 {
+                            font-size: 50px;
+                            color: white;
+                            text-shadow: 0px 5px 38px #fff;
+                        }
                 }
-                h2{
-                    font-size: 50px;
-                    color: white;
-                    text-shadow: 0px 5px 38px #fff;
-                }
-            }
-            .personCon{
-                @include Position($type: absolute,$b: 40px);
-                @include responsive(350) {
-                        overflow-x:auto ;
+                .personCon {
+                    position: absolute;
+                    bottom: 40px;
+                    @include responsive(350) {
+                        position: relative !important;
+                        top: 60px;
+                        overflow-x: auto !important;
+                        white-space: nowrap;
                     }
-                .row{
-                    @include responsive(350){
-                        flex-wrap: nowrap!important;
-                        width: max-content;
-                    }
-                    .column {
+            
+                    .row {
                         @include responsive(350) {
+                            flex-wrap: nowrap !important;
+                            display: flex !important;
+                            width: max-content !important;
+                        }
+            
+                        .column {
+                            @include responsive(350) {
                                 width: 350px;
                             }
+            
                             padding: 20px;
                             transform: scale(0.9);
                             transition: all 0.5s;
                             overflow: hidden;
-                    
+            
                             &:hover {
                                 transform: scale(1);
                             }
-                    
+            
                             .box {
                                 height: 350px;
                                 width: 300px;
@@ -242,6 +254,7 @@ header{
                                 @include Position($type: relative);
                                 transform: translateY(150%);
                                 opacity: 0;
+            
                                 &:hover {
                                     .shape {
                                         .textCon {
@@ -251,33 +264,33 @@ header{
                                         }
                                     }
                                 }
-                    
+            
                                 transition: all 1s;
                                 cursor: pointer;
-                    
+            
                                 .shape {
                                     @include size(100%, 100%);
                                     @include Position($type: absolute, $t: 0, $r: 0);
                                     background-color: rgba(0, 0, 0, 0.5);
                                     @include flexCenter(column);
-                    
+            
                                     .textCon {
                                         @include flexCenter();
                                         font-size: 30px;
                                         color: white;
                                         text-shadow: 0px 5px 38px #fff;
-                    
+            
                                         p {
                                             transition: all 0.5s;
-                    
+            
                                         }
                                     }
-                    
+            
                                     .btnCon {
                                         width: 100%;
                                         @include Position($type: absolute, $b: 30px, $r: 0);
                                         @include flexCenter();
-                    
+            
                                         button {
                                             width: 80%;
                                             background-color: transparent;
@@ -293,35 +306,35 @@ header{
                                             @include Position($type: relative);
                                             @include flexCenter();
                                             gap: 40px;
-                    
+            
                                             .imgCon {
                                                 transition: all 0.5s;
-                    
+            
                                                 img {
                                                     width: 25px;
                                                     height: 25px;
                                                 }
-                    
+            
                                                 &.img1 {
                                                     transform: translateX(-210%);
                                                 }
-                    
+            
                                                 &.img2 {
                                                     transform: translateX(210%);
-                    
+            
                                                     img {
                                                         transform: rotate(180deg);
                                                     }
                                                 }
                                             }
-                    
+            
                                             &:hover {
                                                 transform: scale(0.95);
-                    
+            
                                                 .img1 {
                                                     transform: translateX(0);
                                                 }
-                    
+            
                                                 .img2 {
                                                     transform: translateX(0);
                                                 }
@@ -329,13 +342,14 @@ header{
                                         }
                                     }
                                 }
-                    
+            
                                 img {
                                     width: 100%;
                                     height: 100%;
-                    
+            
                                 }
                             }
+                        }
                     }
                 }
             }
