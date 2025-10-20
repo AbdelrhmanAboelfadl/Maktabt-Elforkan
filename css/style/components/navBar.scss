@@ -13,6 +13,9 @@ nav{
     }
     .navbar-toggler{
         top: 20px!important;
+        @include responsive(350){
+            position: initial!important;
+        }
         img{
             width: 40px;
         }
@@ -30,6 +33,9 @@ nav{
         .navbar-brand {
                 color: white;
                 font-size: 45px;
+                @include responsive(350){
+                    font-size: 30px;
+                }
                 padding: 5px 15px;
         
                 &:hover {

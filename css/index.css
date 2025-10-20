@@ -560,6 +560,11 @@ header .section3 .bigBoxForShapes .box.shaked {
   animation-direction: alternate;
   animation-iteration-count: infinite;
 }
+@media (max-width: 1300px) {
+  header .section3 .bigBoxForShapes .box .playerCon {
+    margin-top: 10px !important;
+  }
+}
 header .section3 .bigBoxForShapes .box .playerCon {
   padding: 10px;
 }
@@ -685,7 +690,7 @@ header .section3 .bigBoxForShapes .box {
   width: 650px;
   border-radius: 30px;
   overflow: hidden;
-  background-image: url("../../../imgs/9019777.jpg");
+  background-image: url("../imgs/9019777.jpg");
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   opacity: 0;
   transition: all 2s 1s;
@@ -701,6 +706,12 @@ header .section3 .bigBoxForShapes .box .textBox .boxTitle {
 header .section3 .bigBoxForShapes .box .textBox .boxTitle h2 {
   font-size: 50px;
 }
+@media (max-width: 1300px) {
+  header .section3 .bigBoxForShapes .box .textBox .boxTitle h2 {
+    font-size: 40px;
+    margin-bottom: 0 !important;
+  }
+}
 header .section3 .bigBoxForShapes .box .textBox .boxTitle img {
   position: initial !important;
   width: 30px;
@@ -708,8 +719,10 @@ header .section3 .bigBoxForShapes .box .textBox .boxTitle img {
   animation-name: animation1;
   filter: none;
 }
-header .section3 .bigBoxForShapes .box .textBox .boxTitle img.play {
-  display: initial !important;
+@media (min-width: 371px) and (max-width: 1300px) {
+  header .section3 .bigBoxForShapes .box .textBox .boxTitle img.play {
+    display: initial !important;
+  }
 }
 @media (min-width: 992px) and (max-width: 1300px) {
   header .section3 .bigBoxForShapes .box .column {
@@ -730,6 +743,11 @@ header .section3 .bigBoxForShapes .box .column .con label {
 header .section3 .bigBoxForShapes .box .column .con label p {
   color: white;
   font-size: 20px;
+}
+@media (max-width: 1300px) {
+  header .section3 .bigBoxForShapes .box .column .con label p {
+    margin-bottom: 5px !important;
+  }
 }
 @media (max-width: 1300px) {
   header .section3 .bigBoxForShapes .box .column .con select {
@@ -786,6 +804,11 @@ nav {
 nav .navbar-toggler {
   top: 20px !important;
 }
+@media (max-width: 1300px) {
+  nav .navbar-toggler {
+    position: initial !important;
+  }
+}
 nav .navbar-toggler img {
   width: 40px;
 }
@@ -809,6 +832,13 @@ nav .logo img:last-child {
 nav .logo .navbar-brand {
   color: white;
   font-size: 45px;
+}
+@media (max-width: 1300px) {
+  nav .logo .navbar-brand {
+    font-size: 30px;
+  }
+}
+nav .logo .navbar-brand {
   padding: 5px 15px;
 }
 nav .logo .navbar-brand:hover {

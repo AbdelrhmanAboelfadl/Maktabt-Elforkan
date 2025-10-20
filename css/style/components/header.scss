@@ -223,7 +223,7 @@ header{
                         overflow-x: auto !important;
                         white-space: nowrap;
                     }
-            
+                    
                     .row {
                         @include responsive(350) {
                             flex-wrap: nowrap !important;
@@ -413,6 +413,9 @@ header{
                     @include animation(animation4, 0.2s);
                 }
                 .playerCon{
+                    @include responsive(350){
+                        margin-top: 10px!important;
+                    }
                     padding: 10px;
                 }
                 .down{
@@ -507,7 +510,11 @@ header{
                                 gap: 30px;
                                 color: white;
                                 h2 {
-                                    font-size: 50px
+                                    font-size: 50px;
+                                    @include responsive(350){
+                                        font-size: 40px;
+                                        margin-bottom: 0!important;
+                                    }
                                 }
                                 img{
                                     position: initial!important;
@@ -516,7 +523,9 @@ header{
                                     animation-name: animation1;
                                     filter: none;
                                     &.play{
-                                        display: initial!important;
+                                        @include responsive(450){
+                                            display: initial !important;
+                                        }
                                     }
                                 }
                         }
@@ -532,10 +541,12 @@ header{
                             label {
                                 width: 100%;
                                 text-align: center;
-            
                                 p {
                                     color: white;
                                     font-size: 20px;
+                                    @include responsive(350){
+                                        margin-bottom: 5px!important;
+                                    }
                                 }
                             }
                             select {
