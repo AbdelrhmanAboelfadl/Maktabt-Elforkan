@@ -32,6 +32,17 @@
         .box{
             @include flexCenter();
             .item{
+                .data{
+                    @include responsive(350){
+                        flex-direction: column-reverse;
+                        .column1{
+                            margin-bottom: 0!important;
+                        }
+                        .column2{
+                            margin-bottom: 20px!important;
+                        }
+                    }
+                }
                 .textBox1{
                     @include responsive(350){
                         margin-bottom: 0!important;

@@ -203,14 +203,13 @@ new fullpage("#fullpage", {
     fitToSectionDelay: 600,
     easingcss3: "cubic-bezier(0.8, -0.4, 0.5, 1)",
     loopHorizontal: false,
-    scrollOverflow: false,
+    scrollOverflow: true, // ✅ لازم تتفعل عشان التاتش يشتغل داخل السكاشن
     lazyLoading: false,
     licenseKey: "YOUR_LICENSE_KEY_HERE",
-    normalScrollElements: '#personcon',
     touchSensitivity: 15,
     bigSectionsDestination: null,
     normalScrollElementTouchThreshold: 5,
-    
+    normalScrollElements: '.personCon',
     afterLoad: function(origin, destination, direction){
         document.querySelectorAll(".navbar-nav li").forEach(li => li.classList.remove("active"));
         const sectionName = destination.anchor;
@@ -222,10 +221,11 @@ new fullpage("#fullpage", {
 });
 
 
+
 // ====================== التنقل بين الأقسام ======================
 document.querySelector('a[data-anchor="home"]').addEventListener("click", function(e){
     e.preventDefault();
-    fullpage_api.moveTo('main');
+    fullpage_api.moveTo('home');
 });
 
 document.querySelector('a[data-anchor="elite"]').addEventListener("click", function(e){

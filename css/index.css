@@ -52,6 +52,24 @@ body {
   height: 100% !important;
 }
 
+#fp-nav ul li a span,
+.fp-slidesNav ul li a span {
+  border-radius: 50%;
+  position: absolute;
+  z-index: 1;
+  height: 4px;
+  width: 4px;
+  border: 0;
+  background: #ffffff !important;
+  left: 50%;
+  top: 50%;
+  margin: -2px 0 0 -2px;
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
 @keyframes animation1 {
   from {
     opacity: 0;
@@ -299,13 +317,18 @@ header .section1 .container .bigBox .boxText .textanim span.cd-words-wrapper {
     margin-top: 0;
   }
 }
+@media (max-width: 1300px) {
+  header .section1 .container .bigBox .boxText .textanim span b {
+    margin-top: 0 !important;
+  }
+}
 header .section1 .container .bigBox .boxText .textanim span b {
-  margin-top: 10px !important;
-  font-size: 40px;
   display: flex;
   flex-direction: initial;
   justify-content: center;
   align-items: center;
+  margin-top: 10px;
+  font-size: 40px;
   gap: 10px;
 }
 header .section1 .container .bigBox .boxText .textanim span b i {
@@ -1021,6 +1044,17 @@ nav .collapse ul li a:focus {
   flex-direction: initial;
   justify-content: center;
   align-items: center;
+}
+@media (max-width: 1300px) {
+  .pop .pop-box .box .item .data {
+    flex-direction: column-reverse;
+  }
+  .pop .pop-box .box .item .data .column1 {
+    margin-bottom: 0 !important;
+  }
+  .pop .pop-box .box .item .data .column2 {
+    margin-bottom: 20px !important;
+  }
 }
 @media (max-width: 1300px) {
   .pop .pop-box .box .item .textBox1 {
