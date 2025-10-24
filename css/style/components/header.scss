@@ -6,10 +6,10 @@ header{
         &::before {
                 @include shapeNav($w: 100%, $h: 100%, $color: black, $opacity: 0.7);
                 @include Position($type: absolute, $t: 0, $r: 0);
-                z-index: -1;
         }
     }
     .section1{
+        @include flexCenter();
         &.active{
             .boxImg{
                 opacity: 1!important;
@@ -105,15 +105,22 @@ header{
                             }
                         }
                         h1.library {
-                                font-size: 70px;
-                                @include responsive(350) {
-                                    font-size: 50px;
-                                }
-                                color: #FFFFFF;
-                                text-shadow: 0px 5px 38px #fff;
+                            font-size: 70px;
+                            margin-bottom:20px ;
+                            @include responsive(350) {
+                                font-size: 50px;
+                                margin-bottom: 20px;
+                            }
+                            @include responsive(1050) {
+                                margin-bottom: 0px;
+                            }
+                            color: #FFFFFF;
+                            text-shadow: 0px 5px 38px #fff;
                         }
                     }
                     .textanim{
+                        height: 100%!important;
+                        text-align: center;
                         font-size: 50px;
                         @include responsive(350) {
                             font-size: 30px;
@@ -186,33 +193,43 @@ header{
                     transition-delay: 2.5s!important;
                 }
             }
-            .textBox{
-                transform: translateY(20%)!important;
+            .container{
+                .parent{
+                    .textBox {
+                        
+                        transform: translateY(30%) !important;
+                        opacity: 1;
+                    }
+                }
             }
         }
         .container{
             .parent{
+                overflow: hidden!important;
                 .textBox {
-                        margin-top: 50px;
-                        @include flexCenter();
-                        transform: translateY(-120%);
-                        transition: all 1s 0.5s;
-                        gap: 10px;
-                
-                        img {
-                            width: 30px;
-                            @include animation(animation1, 1s);
-                
-                            &:nth-last-of-type(2) {
-                                animation-delay: 0.5s;
-                            }
+                    transform: translateY(-200%)!important;
+                    opacity: 0;
+                    margin-top: 50px;
+                    @include flexCenter();
+                    transition: all 1s 0.5s;
+                    img {
+                        width: 30px;
+                        @include animation(animation1, 1s);
+                        &:nth-last-of-type(2) {
+                            animation-delay: 0.5s;
                         }
-                
-                        h2 {
-                            font-size: 50px;
-                            color: white;
-                            text-shadow: 0px 5px 38px #fff;
+                    }
+                    h2 {
+                        font-size: 50px;
+                        color: white;
+                        text-shadow: 0px 5px 38px #fff;
+                        @include responsive(350){
+                            font-size: 38px;
                         }
+                        @include responsive(850){
+                            font-size: 45px;
+                        }
+                    }
                 }
                 .personCon {
                     position: absolute;
@@ -281,10 +298,11 @@ header{
                                         font-size: 30px;
                                         color: white;
                                         text-shadow: 0px 5px 38px #fff;
-            
                                         p {
                                             transition: all 0.5s;
-            
+                                            @include responsive(350){
+                                                font-size: 30px;
+                                            }
                                         }
                                     }
             
@@ -584,4 +602,5 @@ header{
         }
     }
 }
+
 

@@ -1,5 +1,8 @@
 @use "variables" as *;
 @use "mixin" as *;
+body{
+    background-color: black;
+}
 .font1{
     font-family: "tilth";
 }
@@ -36,4 +39,7 @@
 }
 .plyr__menu__container .plyr__control[role=menuitemradio][aria-checked=true]:before {
     background: #0003ff;
+}
+.fp-tableCell {
+    height: 100%!important;
 }

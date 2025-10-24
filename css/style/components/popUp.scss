@@ -2,7 +2,7 @@
 .pop{
     display: none;
     @include size(100%,100%);
-    @include Position($type: fixed, $t: 0, $r: 0);
+    @include Position($type: absolute, $t: 0, $r: 0);
     backdrop-filter: blur(5px) saturate(100%);
     background: rgba(0, 0, 0, 0.348);
     z-index: 1010;
@@ -91,7 +91,8 @@
                 .audio{
                     @include flexCenter();
                     margin-right: 0;
-                    padding-right: 0px;
+                    padding-inline: 0;
+                    margin-inline:auto;
                     #player{
                     width: 100%;
                     margin: auto;

@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="css/jquery.pagepiling.css">
+    <link rel="stylesheet" href="css/fullpage.min.css">
     <link rel="stylesheet" href="css/textAnimation.css">
     <link rel="stylesheet" href="css/plyr.css">
     <link rel="stylesheet" href="css/index.css">
@@ -17,6 +17,7 @@
     <title >مكتبة الفرقان</title>
 </head>
 <body>
+    
     <nav class="navbar navbar-expand-lg ">
         <div class="container-fluid">
             <div class="logo">
@@ -33,21 +34,21 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link "  href="#section3">القرّاء</a>
+                        <a class="nav-link " data-anchor="reciters" href="#reciters-section">القرّاء</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#section2">نخبة القرّاء</a>
+                        <a class="nav-link"  data-anchor="elite" href="#elite-section">نخبة القرّاء</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link " aria-current="page" href="#section1">الرئيسية</a>
+                        <a class="nav-link " data-anchor="home" aria-current="page" href="#main">الرئيسية</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-    <header class="vh-100" id="Home">
-        <div id="pagepiling" class="h-100">
-            <div id="section1" class="section section1 py-5" >
+    <header class="vh-100">
+        <div id="fullpage">
+            <div class="section section1" data-anchor="home" id="main">
                 <div class="container">
                     <div class="bigBox">
                         <div class="boxImg">
@@ -84,17 +85,21 @@
                             <h1 class="cd-headline slide textanim">
                                 <span class="font1">القران الكريم</span>
                                 <span class="cd-words-wrapper ">
-                                    <b class="is-visible"><i class="fa-solid fa-download"></i> <p class="m-0 font3">تحميل</p></b>
-                                    <b class="is-hidden"><i class="fa-solid fa-headphones"></i> <p class="m-0 font3">استماع</p></b>
+                                    <b class="is-visible"><i class="fa-solid fa-download"></i>
+                                        <p class="m-0 font3">تحميل</p>
+                                    </b>
+                                    <b class="is-hidden"><i class="fa-solid fa-headphones"></i>
+                                        <p class="m-0 font3">استماع</p>
+                                    </b>
                                 </span>
                                 <span class="font1">مكتبة الفرقان</span>
-                                
+        
                             </h1>
                         </div>
                     </div>
                 </div>
             </div>
-            <div id="section2" class="section section2 py-5">
+            <div class="section section2" data-anchor="elite" id="elite-section">
                 <div class="shape"></div>
                 <div class="container h-100">
                     <div class="parent w-100 h-100">
@@ -103,6 +108,7 @@
                             <h2 class="font1">نخبة من القرّاء المعتمدين</h2>
                             <img src="imgs/icons/space.png">
                         </div>
+                        
                         <div class="personCon">
                             <div class="container">
                                 <div class="row">
@@ -137,7 +143,7 @@
                                                     <p class="m-0 d-inline font1"> / الشّيخ</p>
                                                 </div>
                                                 <div class="btnCon">
-                                
+        
                                                     <button type="submit" onclick="getMoushaf(112); openNav(`.pop`)">
                                                         <div class="img1 imgCon">
                                                             <img src="imgs/icons/volume.png">
@@ -147,7 +153,7 @@
                                                             <img src="imgs/icons/volume.png">
                                                         </div>
                                                     </button>
-                                
+        
                                                 </div>
                                             </div>
                                         </div>
@@ -183,7 +189,7 @@
                                                     <p class="m-0 d-inline font1"> / الشّيخ</p>
                                                 </div>
                                                 <div class="btnCon">
-                                
+        
                                                     <button type="button" onclick="getMoushaf(118) ; openNav(`.pop`)">
                                                         <div class="img1 imgCon">
                                                             <img src="imgs/icons/volume.png">
@@ -193,7 +199,7 @@
                                                             <img src="imgs/icons/volume.png">
                                                         </div>
                                                     </button>
-                                
+        
                                                 </div>
                                             </div>
                                         </div>
@@ -207,21 +213,21 @@
                     <div class="pop-box">
                         <div class="bigBoxForShapes w-100 h-100">
                             <div class="container h-100 d-flex justify-content-center align-items-center">
-                                <div class="box w-100 h-100 " >
+                                <div class="box w-100 h-100 ">
                                     <div class="item w-100 h-100">
-                                        <div class="row  textBox1 w-100 text-center pt-5 mt-5 position-relative">
+                                        <div class="row  textBox1 w-100 text-center pt-5 mt-5 position-relative m-auto">
                                             <div class="boxTitle w-100 position-relative">
                                                 <h2 class="font2">القران الكريم</h2>
                                             </div>
                                         </div>
-                                        <div class="row position-relative w-100 m-2 info justify-content-evenly">
+                                        <div class="row position-relative w-100 m-auto info justify-content-evenly">
                                             <div class="col-md-4 col2 column column1">
                                                 <div class="soraNameCon con">
                                                     <label for="sora">
                                                         <p class="font3">أسم السورة</p>
                                                     </label>
                                                     <select id="sora" class="sora">
-                                        
+        
                                                     </select>
                                                 </div>
                                             </div>
@@ -231,16 +237,16 @@
                                                         <p class="font3">اختر الرواية</p>
                                                     </label>
                                                     <select id="system" class="system">
-                                        
+        
                                                     </select>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="row w-100 mt-5">
+                                        <div class="row w-100  mt-5 m-auto">
                                             <div class="col-12 audio">
                                                 <audio id="player" controls autoplay muted>
                                                     <source src="" type="audio/mp3">
-                                                    
+        
                                                 </audio>
                                             </div>
                                         </div>
@@ -250,9 +256,8 @@
                         </div>
                     </div>
                 </div>
-
             </div>
-            <div id="section3" class="section section3 ">
+            <div class="section section3" data-anchor="reciters" id="reciters-section">
                 <div class="bigBoxForShapes">
                     <div class="container h-100 d-flex justify-content-center align-items-center">
                         <div class="box">
@@ -270,7 +275,7 @@
                                             <p class="font3">أسم السورة</p>
                                         </label>
                                         <select id="sora2" class="sora">
-                                            
+        
                                         </select>
                                     </div>
                                 </div>
@@ -280,7 +285,7 @@
                                             <p class="font3">اختر الرواية</p>
                                         </label>
                                         <select id="system2" class="system">
-                                            
+        
                                         </select>
                                     </div>
                                 </div>
@@ -289,7 +294,7 @@
                                         <label for="name">
                                             <p class="font3">اسم القارئ</p>
                                         </label>
-                                        <select id="reciters2"  class="name">
+                                        <select id="reciters2" class="name">
                                         </select>
                                     </div>
                                 </div>
@@ -305,7 +310,7 @@
                                 <div class="col-12 w-100 columnDown position-relative">
                                     <div class="boxdown">
                                         <img src="imgs/icons/download (1).gif" class="down">
-                                        <a href="#section3" class="font3 w-100 h-100" >تحميل السورة</a>
+                                        <a href="#section3" class="font3 w-100 h-100">تحميل السورة</a>
                                     </div>
                                     <div class="alert">
                                         <h2 class="font3">الرجاء اختيار السورة </h2>
@@ -331,37 +336,12 @@
             </div>
         </div>
     </div>
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/jq.js"></script>
     <script src="js/plyr.polyfilled.js"></script>
-    <script src="js/jquery.pagepiling.js"></script>
+    <script src="js/fullpage.min.js"></script>
     <script src="js/main.js"></script>
- 
     <script src="js/global.js"></script>
     <script src="js/index.js"></script>
 </body>
