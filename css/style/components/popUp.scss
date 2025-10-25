@@ -42,6 +42,9 @@
                             margin-bottom: 20px!important;
                         }
                     }
+                    @include responsive(850){
+                        flex-direction: initial!important;
+                    }
                 }
                 .textBox1{
                     @include responsive(350){

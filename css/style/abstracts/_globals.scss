@@ -20,18 +20,21 @@ body{
 }
 .plyr__controls__item.plyr__volume{
     @include responsive(350){
-        position: absolute;
-        top: -100%;
-        left: 50%;
-        transform: translate(-50%,50%);
-        border: 2px solid blue;
-        border-bottom: 0 !important;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translate(-50%);
+            border: 2px solid blue;
+            border-block: 0 !important;
+            margin-left: 0;
+            z-index: 1;
     }
     @include responsive(850){
         position: initial!important;
         transform: initial!important;
         border: initial!important;
         border-bottom: 0 !important;
+        margin: initial!important;
     }
 }
 

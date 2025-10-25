@@ -24,11 +24,13 @@ body {
 @media (max-width: 1300px) {
   .plyr__controls__item.plyr__volume {
     position: absolute;
-    top: -100%;
+    top: 100%;
     left: 50%;
-    transform: translate(-50%, 50%);
+    transform: translate(-50%);
     border: 2px solid blue;
-    border-bottom: 0 !important;
+    border-block: 0 !important;
+    margin-left: 0;
+    z-index: 1;
   }
 }
 @media (min-width: 769px) and (max-width: 1300px) {
@@ -37,6 +39,7 @@ body {
     transform: initial !important;
     border: initial !important;
     border-bottom: 0 !important;
+    margin: initial !important;
   }
 }
 
@@ -652,6 +655,9 @@ header .section3 .bigBoxForShapes .box.shaked {
 header .section3 .bigBoxForShapes .box .playerCon {
   padding: 10px;
 }
+header .section3 .bigBoxForShapes .box .row.down {
+  margin-top: 20px !important;
+}
 header .section3 .bigBoxForShapes .box .down {
   z-index: 101010;
   width: 100%;
@@ -1074,6 +1080,11 @@ nav .collapse ul li a:focus {
   }
   .pop .pop-box .box .item .data .column2 {
     margin-bottom: 20px !important;
+  }
+}
+@media (min-width: 769px) and (max-width: 1300px) {
+  .pop .pop-box .box .item .data {
+    flex-direction: initial !important;
   }
 }
 @media (max-width: 1300px) {
