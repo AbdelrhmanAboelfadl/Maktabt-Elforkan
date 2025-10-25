@@ -18,6 +18,26 @@ body {
   border-radius: 10px;
   background: transparent;
   border: 2px solid blue;
+  position: relative;
+}
+
+@media (max-width: 1300px) {
+  .plyr__controls__item.plyr__volume {
+    position: absolute;
+    top: -100%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    border: 2px solid blue;
+    border-bottom: 0 !important;
+  }
+}
+@media (min-width: 769px) and (max-width: 1300px) {
+  .plyr__controls__item.plyr__volume {
+    position: initial !important;
+    transform: initial !important;
+    border: initial !important;
+    border-bottom: 0 !important;
+  }
 }
 
 .plyr__control svg {
@@ -37,7 +57,7 @@ body {
 }
 
 .plyr__controls .plyr__controls__item.plyr__time {
-  color: white;
+  color: rgb(255, 255, 255);
 }
 
 .plyr__volume input[type=range] {

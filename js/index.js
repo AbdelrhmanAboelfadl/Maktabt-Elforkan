@@ -194,7 +194,6 @@ getReciters2();
 
 // =======================================================================================================
 
-
 new fullpage("#fullpage", {
     anchors: ["home", "elite", "reciters"],
     navigation: true,
@@ -219,8 +218,6 @@ new fullpage("#fullpage", {
         }
     }
 });
-
-
 
 // ====================== التنقل بين الأقسام ======================
 document.querySelector('a[data-anchor="home"]').addEventListener("click", function(e){
@@ -248,3 +245,4 @@ window.addEventListener("load",() => {
 },3000)
 })
 // =======================================================================================================
+
