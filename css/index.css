@@ -685,9 +685,17 @@ header .section3 .bigBoxForShapes .box .down .columnDown .boxdown {
   font-size: 20px;
   transition: all 0.5s;
 }
-header .section3 .bigBoxForShapes .box .down .columnDown .boxdown:hover {
-  transform: translateY(-5px);
-  box-shadow: rgba(0, 0, 251, 0.45) 0px 25px 20px -20px;
+@media (max-width: 1300px) {
+  header .section3 .bigBoxForShapes .box .down .columnDown .boxdown:hover {
+    transform: none !important;
+    box-shadow: none !important;
+  }
+}
+@media (min-width: 769px) and (max-width: 1300px) {
+  header .section3 .bigBoxForShapes .box .down .columnDown .boxdown:hover {
+    transform: translateY(-5px) !important;
+    box-shadow: rgba(0, 0, 251, 0.45) 0px 25px 20px -20px !important;
+  }
 }
 header .section3 .bigBoxForShapes .box .down .columnDown .boxdown a {
   color: white;

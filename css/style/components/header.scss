@@ -454,12 +454,18 @@ header{
                                 width: fit-content;
                                 padding: 15px 20px;
                                 @include flexCenter();
-                                
                                 font-size: 20px;
                                 transition: all 0.5s;
                                 &:hover{
-                                    transform: translateY(-5px);
-                                    box-shadow: rgba(0, 0, 251, 0.45) 0px 25px 20px -20px;
+                                    @include responsive(350){
+                                        transform: none !important;
+                                        box-shadow:none!important;
+                                    }
+                                    @include responsive(850){
+                                        transform: translateY(-5px)!important;
+                                        box-shadow: rgba(0, 0, 251, 0.45) 0px 25px 20px -20px !important;
+                                    }
+                                    
                                 }
                                 a{
                                     color: white;
